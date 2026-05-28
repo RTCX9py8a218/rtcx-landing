@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTC X | Next-Gen Onchain Risk & Capital</title>
+    <title>Caveo | Decentralized Pension Fund Engine</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -40,180 +42,370 @@
 </head>
 <body class="bg-obsidian text-slate-200 font-sans antialiased overflow-x-hidden">
 
+    <!-- Header / Navbar -->
     <header class="w-full border-b border-white/5 bg-obsidian/80 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-40 flex items-center justify-between">
+            <!-- Dedicated Standalone Caveo Logo -->
             <div class="flex items-center">
-                <img src="base_logo_transparent_background.png" alt="RTC X Logo" class="h-36 md:h-40 w-auto object-contain">
+                <img src="Caveo_Logo.png" alt="Caveo Insurance Onchained Logo" class="h-32 md:h-36 w-auto object-contain">
             </div>
             
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
-                <a href="#products" class="hover:text-white transition">Product Suite</a>
-                <a href="caveo.html" class="text-slate-400 hover:text-white transition">Caveo Pension</a>
-                <a href="#ticker" class="hover:text-white transition">Markets</a>
-                <a href="#security" class="hover:text-white transition">Institutional Integrity</a>
+                <a href="index.html" class="hover:text-white transition">← Return to RTC X Hub</a>
+                <a href="#simulator" class="hover:text-white transition">Pension Simulator</a>
+                <a href="#allocation" class="hover:text-white transition">Portfolio Distribution</a>
+                <a href="#interlocks" class="hover:text-white transition">Risk Interlocks</a>
             </nav>
 
             <div>
-                <a href="caveo.html" class="gradient-btn px-6 py-3 rounded-lg text-sm font-semibold text-white shadow-lg shadow-rtcPurple/20 hover:opacity-90 transition">
-                    Explore Caveo
+                <a href="index.html" class="bg-white/5 border border-white/10 px-6 py-3 rounded-lg text-sm font-semibold text-slate-300 hover:bg-white/10 transition">
+                    Ecosystem Architecture
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="relative pt-24 pb-20 md:pt-36 md:pb-32 max-w-5xl mx-auto px-6 text-center">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-rtcPurple/10 blur-[120px] rounded-full pointer-events-none"></div>
-
-        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-slate-400 mb-6">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Infrastructure Online: Multi-Product Rollout Active
-        </span>
+    <!-- Main Content Container -->
+    <main class="py-16 max-w-7xl mx-auto px-6">
         
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-[1.15]">
-            The Next Generation of <br>
-            <span class="gradient-text">Onchain Risk & Capital</span>
-        </h1>
-        
-        <p class="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-            RTC X is the institutional trust layer anchoring a fully decentralized financial architecture. We package alternative yields, high-velocity derivatives, and bare-metal compute pools into a unified sovereign framework.
-        </p>
-
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="#products" class="gradient-btn w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white shadow-xl shadow-rtcPurple/30 hover:scale-[1.02] transition duration-200 text-center">
-                View Product Suite
-            </a>
-            <a href="caveo.html" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-slate-300 bg-white/5 border border-white/10 hover:bg-white/10 transition text-center">
-                Launch Caveo App
-            </a>
-        </div>
-    </section>
-
-    <section id="ticker" class="border-y border-white/5 bg-cardBg/30 py-6">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-mono text-xs">
-            <div class="flex items-center justify-between p-3 rounded-lg bg-cardBg border border-white/5">
-                <span class="text-slate-400">cotton.xyz (Gold)</span>
-                <span class="text-white font-bold">$2,342.50 <span class="text-emerald-400 font-normal ml-1">+1.42%</span></span>
+        <!-- Dashboard Branding Header Block -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+            <div>
+                <span class="text-xs font-mono tracking-widest text-rtcGradientEnd uppercase font-bold">Lifecycle Risk Suites</span>
+                <h1 class="text-4xl font-extrabold text-white mt-1">Caveo Decentralized Pension Fund</h1>
             </div>
-            <div class="flex items-center justify-between p-3 rounded-lg bg-cardBg border border-white/5">
-                <span class="text-slate-400">Caveo Global TVL</span>
-                <span class="text-white font-bold">$1,000,000 <span class="text-emerald-400 font-normal ml-1">Live</span></span>
-            </div>
-            <div class="flex items-center justify-between p-3 rounded-lg bg-cardBg border border-white/5">
-                <span class="text-slate-400">iunctio Compute Nodes</span>
-                <span class="text-white font-bold">14,842 <span class="text-indigo-400 font-normal ml-1">Active</span></span>
-            </div>
-            <div class="flex items-center justify-between p-3 rounded-lg bg-cardBg border border-white/5">
-                <span class="text-slate-400">RTC X Core Capacity</span>
-                <span class="gradient-text font-bold">$412.8M <span class="text-slate-500 font-normal ml-1">Live</span></span>
+            <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-xl text-xs font-mono text-slate-300 flex items-center gap-2">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Active Engine: Risk Tiers Configured
             </div>
         </div>
-    </section>
 
-    <section id="products" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <span class="text-xs font-mono tracking-widest text-rtcGradientEnd uppercase font-bold">Vertical Integration</span>
-            <h2 class="text-3xl font-bold text-white mt-1 mb-4">The Three Engine Sub-Suites</h2>
-            <p class="text-slate-400 max-w-xl mx-auto">Sovereign decentralized products operating natively under the RTC X liquidity and capital umbrella.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-cardBg border border-white/5 p-8 rounded-2xl relative flex flex-col justify-between hover:border-rtcPurple/30 transition duration-300">
-                <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="text-2xl text-rtcPurple">⬡</div>
-                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">Live</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Caveo Pension Fund</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                        A decentralized, capital-preservation engine harvesting structured reinsurance risk, tokenized treasuries, and delta-neutral yields. Secure, compliance-ready long-term asset management.
-                    </p>
-                </div>
-                <a href="caveo.html" class="inline-flex items-center text-xs font-bold text-rtcGradientEnd hover:underline">
-                    Enter Caveo Dashboard →
-                </a>
-            </div>
-
-            <div class="bg-cardBg border border-white/5 p-8 rounded-2xl relative flex flex-col justify-between hover:border-rtcPurple/30 transition duration-300">
-                <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="text-2xl text-rtcPurple">⬡</div>
-                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-indigo-400/10 text-indigo-400 border border-indigo-400/20">Alpha v1</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">cotton.xyz</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                        A hyper-focused, commodity-specific perpetual DEX. Trade hard assets like gold, silver, and crude oil with deep leverage backed by audited physical reserves.
-                    </p>
-                </div>
-                <span class="text-xs font-mono text-slate-500">Infrastructure Initializing...</span>
-            </div>
-
-            <div class="bg-cardBg border border-white/5 p-8 rounded-2xl relative flex flex-col justify-between hover:border-rtcPurple/30 transition duration-300">
-                <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="text-2xl text-rtcPurple">⬡</div>
-                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-amber-400/10 text-amber-400 border border-amber-400/20">Testnet</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">iunctio DePIN</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                        The raw infrastructure layer supplying decentralized, bare-metal compute networks to institutional applications like ICP and io.net while powering our internal execution oracles.
-                    </p>
-                </div>
-                <span class="text-xs font-mono text-slate-500">Network Initializing...</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="security" class="py-20 bg-cardBg/20 border-t border-white/5">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold text-white mb-6">Institutional Grade Security Protocols</h2>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                        RTC X approaches decentralized finance with institutional compliance rigor. Every asset pool, risk assessment, and smart contract operates under programmatic, ironclad guardrails.
-                    </p>
-                    <ul class="space-y-4 font-mono text-xs text-slate-300">
-                        <li class="flex items-center gap-3"><span class="text-rtcPurple">✓</span> VERIFIABLE 1:1 PROOF OF RESERVES</li>
-                        <li class="flex items-center gap-3"><span class="text-rtcPurple">✓</span> REGULATED SPV STRUCTURES (CAYMAN/SWISS)</li>
-                        <li class="flex items-center gap-3"><span class="text-rtcPurple">✓</span> DECENTRALIZED TIER-1 ORACLE NETWORKS</li>
-                    </ul>
-                </div>
-                <div class="bg-cardBg border border-white/5 p-8 rounded-2xl font-mono text-xs space-y-4 text-slate-400">
-                    <div class="pb-3 border-b border-white/5 text-slate-200 flex justify-between">
-                        <span>SYSTEM HEALTH</span>
-                        <span class="text-emerald-400">● OPTIMAL</span>
-                    </div>
-                    <div>[AUDIT] OpenZeppelin / Spearbit Pass</div>
-                    <div>[ORACLE] Deviation Threshold &lt; 0.05%</div>
-                    <div>[LEGAL] Bankruptcy-Remote Wrappers Active</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="cta" class="py-24 max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Secure Early Pool Allocation</h2>
-        <p class="text-slate-400 mb-8 max-w-lg mx-auto">Join the Phase 1 Genesis liquidity launch. Secure trading tier discounts and prioritized yield access.</p>
-        
-        <form class="flex flex-col sm:flex-row max-w-md mx-auto gap-3" onsubmit="event.preventDefault(); alert('Allocation Registered.');">
-            <input type="email" placeholder="Enter institutional email / ENS" required class="flex-1 bg-cardBg border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-rtcPurple transition">
-            <button type="submit" class="gradient-btn px-6 py-3 rounded-xl font-bold text-white text-sm hover:opacity-95 transition whitespace-nowrap">
-                Request Onboarding
+        <!-- Strategy Selector Tabs -->
+        <div class="bg-cardBg border border-white/5 p-2 rounded-xl flex flex-wrap gap-2 max-w-xl mb-10">
+            <button onclick="switchStrategy('conservative')" id="btn-conservative" class="flex-1 py-2.5 px-4 text-xs font-mono font-bold rounded-lg transition duration-200 bg-white/5 text-slate-400 hover:text-white">
+                CONSERVATIVE (6.0% APY)
             </button>
-        </form>
-    </section>
+            <button onclick="switchStrategy('moderate')" id="btn-moderate" class="flex-1 py-2.5 px-4 text-xs font-mono font-bold rounded-lg transition duration-200 gradient-btn text-white shadow-lg shadow-rtcPurple/20">
+                MODERATE (9.975% APY)
+            </button>
+            <button onclick="switchStrategy('aggressive')" id="btn-aggressive" class="flex-1 py-2.5 px-4 text-xs font-mono font-bold rounded-lg transition duration-200 bg-white/5 text-slate-400 hover:text-white">
+                AGGRESSIVE (13.5% APY)
+            </button>
+        </div>
 
+        <!-- Macro Metrics Grid (Driven by Javascript Strategy Selection) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="bg-cardBg border border-white/5 p-6 rounded-2xl">
+                <p class="text-xs font-mono text-slate-400 uppercase mb-2">Simulated Pool Capital</p>
+                <p class="text-3xl font-extrabold text-white font-mono">$1,000,000<span class="text-xs text-slate-500 font-normal ml-1">USD</span></p>
+            </div>
+            <div class="bg-cardBg border border-white/5 p-6 rounded-2xl">
+                <p class="text-xs font-mono text-slate-400 uppercase mb-2">Selected Strategy APY</p>
+                <p id="metric-apy" class="text-3xl font-extrabold gradient-text font-mono">9.975%</p>
+            </div>
+            <div class="bg-cardBg border border-white/5 p-6 rounded-2xl">
+                <p class="text-xs font-mono text-slate-400 uppercase mb-2">Monthly Strategy Return</p>
+                <p id="metric-monthly" class="text-3xl font-extrabold text-emerald-400 font-mono">$8,312.50</p>
+            </div>
+            <div class="bg-cardBg border border-white/5 p-6 rounded-2xl">
+                <p class="text-xs font-mono text-slate-400 uppercase mb-2">Projected Annual Yield</p>
+                <p id="metric-annual" class="text-3xl font-extrabold text-white font-mono">$99,750</p>
+            </div>
+        </div>
+
+        <!-- NEW VISIBILITY MODULE: Pension vs Caveo Calculator -->
+        <section id="simulator" class="bg-cardBg border border-white/5 p-8 rounded-2xl mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-rtcPurple/5 blur-[100px] rounded-full pointer-events-none"></div>
+            
+            <div class="mb-6">
+                <span class="text-xs font-mono tracking-widest text-rtcGradientEnd uppercase font-bold">Transparency & Projection Dashboard</span>
+                <h2 class="text-2xl font-bold text-white mt-1">Sovereign Alternative vs. Government Pension Calculator</h2>
+                <p class="text-slate-400 text-sm mt-1">Contrast legacy state pension fund projections against automated onchain asset compounding structures.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <!-- User Entry Variables Inputs -->
+                <div class="space-y-4 bg-white/5 border border-white/5 p-6 rounded-xl">
+                    <h3 class="text-sm font-mono font-bold text-slate-200 tracking-wider uppercase mb-2">Simulation Inputs</h3>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-400 mb-1">Your Current Age</label>
+                        <input type="number" id="input-age" value="30" min="18" max="70" oninput="calculateProjections()" class="w-full bg-obsidian border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-rtcPurple font-mono">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-400 mb-1">Target Retirement Age</label>
+                        <input type="number" id="input-retire" value="65" min="50" max="80" oninput="calculateProjections()" class="w-full bg-obsidian border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-rtcPurple font-mono">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-slate-400 mb-1">Monthly Mandatory Pension Contribution ($)</label>
+                        <input type="number" id="input-contribution" value="400" min="50" max="5000" step="50" oninput="calculateProjections()" class="w-full bg-obsidian border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-rtcPurple font-mono">
+                    </div>
+                </div>
+
+                <!-- Strategic Outputs Display Side -->
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
+                    <!-- Legacy Govt Card -->
+                    <div class="border border-white/5 bg-white/[0.02] p-6 rounded-xl flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+                                <h4 class="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">Relevant Govt Pension Fund</h4>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Calculated using inflation-adjusted averages for legacy public security models (~2.5% implied annual expansion index).</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-mono text-slate-500 mb-0.5">Estimated Principal Value at Retirement:</p>
+                            <p id="calc-govt-total" class="text-3xl font-mono font-bold text-rose-400">$303,842</p>
+                        </div>
+                    </div>
+
+                    <!-- Caveo Disruption Card -->
+                    <div class="border border-rtcPurple/20 bg-rtcPurple/5 p-6 rounded-xl flex flex-col justify-between relative">
+                        <div class="absolute top-4 right-4 bg-emerald-400/10 text-emerald-400 border border-emerald-400/20 px-2 py-0.5 rounded text-[9px] font-mono tracking-wider font-bold">OPTIMIZED</div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <h4 class="text-xs font-mono font-bold text-slate-200 uppercase tracking-wider">Caveo Sovereign Vault alternative</h4>
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed mb-4">Calculated across selected risk vectors streaming continuous yields natively over automated oracle systems.</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-mono text-slate-400 mb-0.5">Projected Autonomous Capital Pool Asset:</p>
+                            <p id="calc-caveo-total" class="text-3xl font-mono font-bold text-emerald-400">$1,385,420</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Allocation Grid Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            
+            <!-- Left Side Allocation Bar Chart Progress Trackers -->
+            <div class="lg:col-span-2 bg-cardBg border border-white/5 p-8 rounded-2xl">
+                <h3 class="text-lg font-bold text-white mb-6">Yield Generator Portfolio Distribution</h3>
+                
+                <div class="space-y-6">
+                    <!-- STRC -->
+                    <div>
+                        <div class="flex justify-between text-xs font-mono mb-2">
+                            <span id="tag-strc-title" class="text-white font-semibold">STRC Structured Premium Pool (50%)</span>
+                            <span id="tag-strc-val" class="text-slate-400">$500,000 @ <span class="text-emerald-400">11.5% APY</span></span>
+                        </div>
+                        <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden">
+                            <div id="bar-strc" class="bg-gradient-to-r from-rtcPurple to-rtcGradientEnd h-full rounded-full transition-all duration-500" style="width: 50%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Ondo -->
+                    <div>
+                        <div class="flex justify-between text-xs font-mono mb-2">
+                            <span id="tag-ondo-title" class="text-white font-semibold">Ondo Tokenized US Treasuries (25%)</span>
+                            <span id="tag-ondo-val" class="text-slate-400">$250,000 @ <span class="text-emerald-400">4.5% APY</span></span>
+                        </div>
+                        <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden">
+                            <div id="bar-ondo" class="bg-gradient-to-r from-rtcPurple to-rtcGradientEnd h-full rounded-full transition-all duration-500" style="width: 25%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Ethena USDe -->
+                    <div>
+                        <div class="flex justify-between text-xs font-mono mb-2">
+                            <span id="tag-ethena-title" class="text-white font-semibold">Ethena USDe Delta-Neutral Basis (15%)</span>
+                            <span id="tag-ethena-val" class="text-slate-400">$150,000 @ <span class="text-emerald-400">14.0% APY</span></span>
+                        </div>
+                        <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden">
+                            <div id="bar-ethena" class="bg-gradient-to-r from-rtcPurple to-rtcGradientEnd h-full rounded-full transition-all duration-500" style="width: 15%"></div>
+                        </div>
+                    </div>
+
+                    <!-- SATA -->
+                    <div>
+                        <div class="flex justify-between text-xs font-mono mb-2">
+                            <span id="tag-sata-title" class="text-white font-semibold">SATA Structured Yield (10%)</span>
+                            <span id="tag-sata-val" class="text-slate-400">$100,000 @ <span class="text-emerald-400">10.0% APY</span></span>
+                        </div>
+                        <div class="w-full bg-white/5 h-2.5 rounded-full overflow-hidden">
+                            <div id="bar-sata" class="bg-gradient-to-r from-rtcPurple to-rtcGradientEnd h-full rounded-full transition-all duration-500" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel Side: Autonomous Interface Simulator Box -->
+            <div class="bg-cardBg border border-white/5 p-8 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">Autonomous Yield Pipeline</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-6">Caveo assets stream compounding value per block execution parameters directly from protocols.</p>
+                    
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/5 font-mono text-xs space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-slate-500">Accumulated Yield:</span>
+                            <span class="text-white font-bold animate-pulse">$2,414.88 USDC</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-500">Next Distribution:</span>
+                            <span class="text-slate-300">In 4 days</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-500">Network State:</span>
+                            <span class="text-emerald-400">Streaming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="w-full gradient-btn py-3.5 rounded-xl text-center font-bold text-sm text-white hover:opacity-95 transition shadow-lg shadow-rtcPurple/20">
+                    Connect Portfolio Wallet
+                </button>
+            </div>
+        </div>
+
+        <!-- Deep-Dive Risk Interlocks Guardrail Layer -->
+        <div id="interlocks" class="border-t border-white/5 pt-16">
+            <h3 class="text-xl font-bold text-white mb-8">Decentralized Risk Guardrails & Circuit Interlocks</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-cardBg border border-white/5 p-6 rounded-xl">
+                    <h4 class="text-white font-bold mb-2 text-sm">1. Non-Correlation Safeguard</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">By routing a calculated weight of liquidity into alternative reinsurance premiums (STRC/SATA), the principal retirement capital remains completely decoupled from broader crypto market cycles and volatility events.</p>
+                </div>
+                <div class="bg-cardBg border border-white/5 p-6 rounded-xl">
+                    <h4 class="text-white font-bold mb-2 text-sm">2. Short-Volatility Circuit Breaker</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Ethena USDe basis streams are monitored continually by algorithmic oracles. If delta funding rate spreads turn negative, capital drops automatically into tokenized T-Bills to protect pool assets.</p>
+                </div>
+                <div class="bg-cardBg border border-white/5 p-6 rounded-xl">
+                    <h4 class="text-white font-bold mb-2 text-sm">3. Timelocked Trust Custody</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">No single developer or entity holds administrative key patterns. Strategic capital reallocation operations require multi-sig threshold consensus with clear emergency execution delays.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Institutional Compliance Footer -->
     <footer class="border-t border-white/5 bg-obsidian py-12 text-xs text-slate-500">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
             <div class="max-w-xl space-y-3">
-                <p class="font-bold text-slate-400">RTC X Legal Disclaimer</p>
-                <p>Digital asset derivatives, perpetuals, and insurance-linked smart contracts involve substantial risk of capital loss. Services are not directed toward, or intended for access by, individuals residing in the United States or any sanctioned jurisdictions.</p>
-                <p>© 2026 RTC X. All rights reserved.</p>
+                <p class="font-bold text-slate-400">Caveo Fund System Disclaimer</p>
+                <p>Caveo is a fully decentralized programmatic platform module operated on the RTC X protocol matrix. Capital lockup requirements, premium tracking metrics, and historical performance indices do not constitute explicit investment guarantees or institutional financial advisory.</p>
+                <p>© 2026 Caveo & RTC X. All rights reserved.</p>
             </div>
-            <div class="flex gap-6 md:self-end text-slate-400">
-                <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition">Terms of Use</a>
+            <div class="flex gap-6 md:self-end text-slate-400 font-mono text-[11px]">
+                <span class="text-slate-600">Infrastructure Layer: RTC X Core</span>
             </div>
         </div>
     </footer>
 
+    <!-- Logic Engine Script Element for Reactive Controls and Projections -->
+    <script>
+        // Strategy Data Matrix Definitional Configuration
+        const strategies = {
+            conservative: {
+                apy: 0.060,
+                apyText: "6.000%",
+                monthlyReturn: "$5,000.00",
+                annualYield: "$60,000",
+                allocations: {
+                    strc: { pct: 20, cash: "$200,000", apy: "11.5%" },
+                    ondo: { pct: 60, cash: "$600,000", apy: "4.5%" },
+                    ethena: { pct: 0, cash: "$0", apy: "14.0%" },
+                    sata: { pct: 20, cash: "$200,000", apy: "10.0%" }
+                }
+            },
+            moderate: {
+                apy: 0.09975,
+                apyText: "9.975%",
+                monthlyReturn: "$8,312.50",
+                annualYield: "$99,750",
+                allocations: {
+                    strc: { pct: 50, cash: "$500,000", apy: "11.5%" },
+                    ondo: { pct: 25, cash: "$250,000", apy: "4.5%" },
+                    ethena: { pct: 15, cash: "$150,000", apy: "14.0%" },
+                    sata: { pct: 10, cash: "$100,000", apy: "10.0%" }
+                }
+            },
+            aggressive: {
+                apy: 0.1350,
+                apyText: "13.500%",
+                monthlyReturn: "$11,250.00",
+                annualYield: "$135,000",
+                allocations: {
+                    strc: { pct: 35, cash: "$350,000", apy: "11.5%" },
+                    ondo: { pct: 0, cash: "$0", apy: "4.5%" },
+                    ethena: { pct: 45, cash: "$450,000", apy: "14.0%" },
+                    sata: { pct: 20, cash: "$200,000", apy: "10.0%" }
+                }
+            }
+        };
+
+        let currentStrategyKey = 'moderate';
+
+        function switchStrategy(stratKey) {
+            currentStrategyKey = stratKey;
+            const strat = strategies[stratKey];
+
+            // Update DOM Tabs Styling States
+            ['conservative', 'moderate', 'aggressive'].forEach(k => {
+                const btn = document.getElementById(`btn-${k}`);
+                if(k === stratKey) {
+                    btn.className = "flex-1 py-2.5 px-4 text-xs font-mono font-bold rounded-lg transition duration-200 gradient-btn text-white shadow-lg shadow-rtcPurple/20";
+                } else {
+                    btn.className = "flex-1 py-2.5 px-4 text-xs font-mono font-bold rounded-lg transition duration-200 bg-white/5 text-slate-400 hover:text-white";
+                }
+            });
+
+            // Update Dynamic Headroom Metrics Numbers
+            document.getElementById('metric-apy').innerText = strat.apyText;
+            document.getElementById('metric-monthly').innerText = strat.monthlyReturn;
+            document.getElementById('metric-annual').innerText = strat.annualYield;
+
+            // Update Dynamic Visual Tracking Bar Adjustments
+            Object.keys(strat.allocations).forEach(asset => {
+                const data = strat.allocations[asset];
+                document.getElementById(`bar-${asset}`).style.width = `${data.pct}%`;
+                document.getElementById(`tag-${asset}-val`).innerHTML = `${data.cash} @ <span class="text-emerald-400">${data.apy} APY</span>`;
+                
+                // Capitalize title tag text explicitly
+                let nameMap = {strc: "STRC Structured Premium Pool", ondo: "Ondo Tokenized US Treasuries", ethena: "Ethena USDe Delta-Neutral Basis", sata: "SATA Structured Yield"};
+                document.getElementById(`tag-${asset}-title`).innerText = `${nameMap[asset]} (${data.pct}%)`;
+            });
+
+            // Re-fire visibility calculator results metrics changes
+            calculateProjections();
+        }
+
+        function calculateProjections() {
+            const age = parseInt(document.getElementById('input-age').value) || 30;
+            const retire = parseInt(document.getElementById('input-retire').value) || 65;
+            const monthlyContribution = parseFloat(document.getElementById('input-contribution').value) || 400;
+
+            const investmentYears = Math.max(0, retire - age);
+            const months = investmentYears * 12;
+
+            if (months === 0) {
+                document.getElementById('calc-govt-total').innerText = "$0";
+                document.getElementById('calc-caveo-total').innerText = "$0";
+                return;
+            }
+
+            // Fixed Yield Constants For Relative Models Projections
+            const govtRate = 0.025 / 12; // 2.5% public baseline yield index representation
+            const caveoRate = strategies[currentStrategyKey].apy / 12;
+
+            // Future Value formulas computation tracking adjustments ($FV = P \times \frac{(1+r)^n - 1}{r}$)
+            let govtFV = monthlyContribution * ((Math.pow(1 + govtRate, months) - 1) / govtRate);
+            let caveoFV = monthlyContribution * ((Math.pow(1 + caveoRate, months) - 1) / caveoRate);
+
+            // Format Numeric Displays to US Currency standard localized variables updates
+            document.getElementById('calc-govt-total').innerText = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(govtFV);
+            document.getElementById('calc-caveo-total').innerText = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(caveoFV);
+        }
+
+        // Initialize Projection Values calculations explicitly on script execution phase
+        window.onload = function() {
+            calculateProjections();
+        };
+    </script>
 </body>
 </html>
