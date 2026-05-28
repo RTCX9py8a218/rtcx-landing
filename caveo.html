@@ -49,18 +49,11 @@
     <header class="w-full border-b border-white/5 bg-terminalBlack/90 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
             
-            <!-- Core Brand Link using the Exact Caveo_Logo.png Asset -->
+            <!-- Clean Header Brand Block (Text Hidden, Only Prominent Logo Displayed) -->
             <a href="index.html" class="flex items-center gap-4 group">
-                <!-- Exact Caveo Image Asset Integration -->
-                <div class="h-14 w-14 rounded-xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-1 group-hover:border-rtcBlue transition-all">
-                    <img src="Caveo_Logo.png" alt="Caveo Logo" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2300D2FF%22 stroke-width=%222%22><rect width=%2220%22 height=%2220%22 x=%222%22 y=%222%22 rx=%224%22/></svg>';" class="h-full w-full object-contain">
-                </div>
-                
-                <div class="h-8 w-px bg-white/10 hidden sm:block"></div>
-                <div>
-                    <span class="text-2xl font-black tracking-tighter text-white block group-hover:text-rtcBlue transition">
-                        CAVEO <span class="text-xs font-mono font-bold text-slate-500 tracking-normal block mt-0.5">// RTC X ECOSYSTEM GATEWAY</span>
-                    </span>
+                <!-- Large, High-Visibility Logo Wrapper matching RTC X dimensions -->
+                <div class="h-20 w-48 rounded-xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-2 group-hover:border-rtcBlue transition-all">
+                    <img src="Caveo_Logo.png" alt="Caveo Logo" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2300D2FF%22 stroke-width=%222%22><rect width=%2220%22 height=%2220%22 x=%222%22 y=%222%22 rx=%224%22/><text x=%2250%25%22 y=%2255%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%226%22 font-family=%22sans-serif%22 font-weight=%22bold%22>CAVEO</text></svg>';" class="h-full w-full object-contain">
                 </div>
             </a>
             
@@ -151,10 +144,10 @@
 
         </div>
 
-        <!-- Corrected Product Section: Asset Underlyings and Percentages Visualized via Metric Allocation Bars -->
+        <!-- Fully Re-engineered Product Cards: Every Card Lists the Strategy Composition Elements Concurrently -->
         <section class="mb-16">
             <div class="border-b border-white/5 pb-4 mb-8">
-                <h3 class="text-xs font-mono tracking-widest text-slate-500 uppercase font-bold">// Active Deployment Products & Underlying Asset Allocations</h3>
+                <h3 class="text-xs font-mono tracking-widest text-slate-500 uppercase font-bold">// Active Deployment Products & Complete Strategy Breakdown</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
@@ -168,16 +161,43 @@
                         <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Core system pipeline layer parsing base account transactions into primary yield execution pools.</p>
                     </div>
                     
-                    <!-- Direct Underlyings Layout with Percent Bar -->
+                    <!-- Direct Underlyings Layout containing ALL assets in the strategy basket -->
                     <div class="space-y-4 border-t border-white/5 pt-4">
+                        <span class="text-[10px] text-slate-500 block font-mono uppercase tracking-wider">// Strategy Composition</span>
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
                                 <span class="text-slate-300 font-bold">STRC Engine</span>
                                 <span class="text-rtcBlue font-bold">50%</span>
                             </div>
-                            <!-- Allocation Track -->
-                            <div class="w-full bg-terminalBlack h-2 rounded-full overflow-hidden p-0 border border-white/5">
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
                                 <div class="bg-rtcBlue h-full rounded-full" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
+                                <span class="text-slate-400">ONDO Treasuries</span>
+                                <span class="text-slate-400 font-bold">25%</span>
+                            </div>
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-purple-500/40 h-full rounded-full" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
+                                <span class="text-slate-400">USDe Pools</span>
+                                <span class="text-slate-400 font-bold">15%</span>
+                            </div>
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-emerald-400/40 h-full rounded-full" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
+                                <span class="text-slate-400">SATA Yield Array</span>
+                                <span class="text-slate-400 font-bold">10%</span>
+                            </div>
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-slate-600 h-full rounded-full" style="width: 10%;"></div>
                             </div>
                         </div>
                     </div>
@@ -193,16 +213,43 @@
                         <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Low-volatility tokenized short-term sovereign debt allocation maintaining foundational capital structures.</p>
                     </div>
                     
-                    <!-- Direct Underlyings Layout with Percent Bar -->
+                    <!-- Direct Underlyings Layout containing ALL assets in the strategy basket -->
                     <div class="space-y-4 border-t border-white/5 pt-4">
+                        <span class="text-[10px] text-slate-500 block font-mono uppercase tracking-wider">// Strategy Composition</span>
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
+                                <span class="text-slate-400">STRC Engine</span>
+                                <span class="text-slate-400 font-bold">50%</span>
+                            </div>
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-rtcBlue/40 h-full rounded-full" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
                                 <span class="text-slate-300 font-bold">ONDO Treasuries</span>
                                 <span class="text-purple-400 font-bold">25%</span>
                             </div>
-                            <!-- Allocation Track -->
-                            <div class="w-full bg-terminalBlack h-2 rounded-full overflow-hidden p-0 border border-white/5">
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
                                 <div class="bg-purple-500 h-full rounded-full" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
+                                <span class="text-slate-400">USDe Pools</span>
+                                <span class="text-slate-400 font-bold">15%</span>
+                            </div>
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-emerald-400/40 h-full rounded-full" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
+                                <span class="text-slate-400">SATA Yield Array</span>
+                                <span class="text-slate-400 font-bold">10%</span>
+                            </div>
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-slate-600 h-full rounded-full" style="width: 10%;"></div>
                             </div>
                         </div>
                     </div>
@@ -218,26 +265,42 @@
                         <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Delta-neutral hedging frameworks running perpetual funding basis arbitrage mechanics.</p>
                     </div>
                     
-                    <!-- Direct Underlyings Layout with Percent Bars -->
+                    <!-- Direct Underlyings Layout containing ALL assets in the strategy basket -->
                     <div class="space-y-4 border-t border-white/5 pt-4">
+                        <span class="text-[10px] text-slate-500 block font-mono uppercase tracking-wider">// Strategy Composition</span>
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
+                                <span class="text-slate-400">STRC Engine</span>
+                                <span class="text-slate-400 font-bold">50%</span>
+                            </div>
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-rtcBlue/40 h-full rounded-full" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
+                                <span class="text-slate-400">ONDO Treasuries</span>
+                                <span class="text-slate-400 font-bold">25%</span>
+                            </div>
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-purple-500/40 h-full rounded-full" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
                                 <span class="text-slate-300 font-bold">USDe Pools</span>
                                 <span class="text-emerald-400 font-bold">15%</span>
                             </div>
-                            <!-- Allocation Track -->
-                            <div class="w-full bg-terminalBlack h-2 rounded-full overflow-hidden p-0 border border-white/5">
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
                                 <div class="bg-emerald-400 h-full rounded-full" style="width: 15%;"></div>
                             </div>
                         </div>
-                        
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                            <div class="flex justify-between items-center text-xs font-mono mb-1">
                                 <span class="text-slate-300 font-bold">SATA Yield Array</span>
                                 <span class="text-slate-400 font-bold">10%</span>
                             </div>
-                            <!-- Allocation Track -->
-                            <div class="w-full bg-terminalBlack h-2 rounded-full overflow-hidden p-0 border border-white/5">
+                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
                                 <div class="bg-slate-500 h-full rounded-full" style="width: 10%;"></div>
                             </div>
                         </div>
