@@ -49,25 +49,22 @@
     <header class="w-full border-b border-white/5 bg-terminalBlack/90 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
             
-            <!-- Brand Link Back to Main Gate -->
-            <a href="index.html" class="flex items-center gap-3 group">
-                <div class="h-10 w-10 rounded-xl bg-rtcBlue/10 border border-rtcBlue/30 flex items-center justify-center font-mono font-black text-rtcBlue transition group-hover:bg-rtcBlue/20">
+            <!-- Authentic Brand Stack -->
+            <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-xl bg-rtcBlue/10 border border-rtcBlue/30 flex items-center justify-center font-mono font-black text-rtcBlue">
                     C
                 </div>
                 <div>
                     <span class="text-xl font-extrabold tracking-tight text-white block">CAVEO <span class="text-xs font-mono font-medium text-slate-500">// PROTOCOL</span></span>
                 </div>
-            </a>
+            </div>
             
             <!-- Network Telemetry -->
             <div class="flex items-center space-x-4 text-xs font-mono">
-                <div class="hidden md:flex flex-col text-right">
+                <div class="flex flex-col text-right">
                     <span class="text-slate-500">DYNAMIC APR RANGE</span>
                     <span class="text-rtcBlue font-bold">8.42% — 14.19%</span>
                 </div>
-                <a href="index.html" class="bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 px-4 py-2 rounded-xl transition text-xs">
-                    ← Main Portal
-                </a>
             </div>
         </div>
     </header>
@@ -140,117 +137,109 @@
                 </div>
 
                 <div class="text-[11px] font-mono text-slate-500 leading-normal mt-6">
-                    ⚠️ Projections are computed programmatically under active Ondo treasury mechanics and pool demand matrices. Past protocol yield metrics do not guarantee linear future payouts.
+                    ⚠️ Projections are computed programmatically under active asset treasury mechanics and pool demand matrices. Past protocol yield metrics do not guarantee linear future payouts.
                 </div>
             </section>
 
         </div>
 
-        <!-- Macro UX Matrix: Local State Deficits vs. Caveo Payouts -->
+        <!-- Reworked Consistent Sovereign Deficit Matrix -->
         <section class="mb-16">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-white/5 pb-4 mb-8 gap-2">
                 <div>
                     <h2 class="text-xl font-bold text-white font-mono uppercase tracking-wider">Sovereign Pension Deficit Radar</h2>
-                    <p class="text-xs text-slate-500 font-mono mt-1">Real-time macro index vs. local state baseline models</p>
+                    <p class="text-xs text-slate-500 font-mono mt-1">Sovereign monthly baseline calculations converted to static USD values</p>
                 </div>
                 <div class="flex items-center gap-2 text-xs font-mono bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
                     <span class="text-rtcBlue animate-pulse">●</span>
-                    <span class="text-slate-400">SPOT ROUTING: <span class="text-white font-bold">USD BASELINE</span></span>
+                    <span class="text-slate-400">INDEX LAYER: <span class="text-white font-bold">USD CONVERSION MAP</span></span>
                 </div>
             </div>
 
-            <!-- Macro Country Grid -->
+            <!-- Consistent Data Grid: Meticulously Aligned Metrics -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
                 <!-- MALTA -->
-                <div class="bg-[#0D0C14] border border-white/5 p-6 rounded-2xl relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <span class="text-[10px] font-mono text-slate-500 block uppercase">// REGION EU</span>
+                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
                             <h4 class="text-lg font-bold text-white">Malta</h4>
+                            <span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest">// REGION_EU</span>
                         </div>
-                        <span class="text-xs font-mono text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-500/10 font-bold">STABLE</span>
-                    </div>
-                    <div class="my-6">
-                        <div class="flex items-baseline gap-1">
-                          <span class="text-3xl font-extrabold font-mono text-white tracking-tight">$953</span>
-                          <span class="text-xs text-slate-400 font-mono">/mo</span>
+                        <div class="my-4">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-extrabold font-mono text-white tracking-tight">$953</span>
+                                <span class="text-xs text-slate-400 font-mono">/mo</span>
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-500 block mt-1">Based on €221.78/wk national threshold</span>
                         </div>
-                        <span class="text-xs font-mono text-slate-500 block mt-1">Base Contributory Floor (€221.78/wk)</span>
                     </div>
                     <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-mono">
-                        <span class="text-slate-400">Caveo Contrast:</span>
-                        <span class="text-emerald-400 font-bold">+342.2% Gain</span>
+                        <span class="text-slate-400">Deficit Gap:</span>
+                        <span class="text-rtcBlue font-bold">-$3,262.10 vs Caveo</span>
                     </div>
                 </div>
 
                 <!-- TURKEY -->
-                <div class="bg-[#0D0C14] border border-white/5 p-6 rounded-2xl relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <span class="text-[10px] font-mono text-slate-500 block uppercase">// REGION ASIA/EU</span>
+                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
                             <h4 class="text-lg font-bold text-white">Turkey</h4>
+                            <span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest">// REGION_TR</span>
                         </div>
-                        <span class="text-xs font-mono text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded border border-amber-500/10 font-bold">INFLATION PRESSURE</span>
-                    </div>
-                    <div class="my-6">
-                        <div class="flex items-baseline gap-1">
-                          <span class="text-3xl font-extrabold font-mono text-white tracking-tight">$435</span>
-                          <span class="text-xs text-slate-400 font-mono">/mo</span>
+                        <div class="my-4">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-extrabold font-mono text-white tracking-tight">$435</span>
+                                <span class="text-xs text-slate-400 font-mono">/mo</span>
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-500 block mt-1">Based on 20,000 TRY statutory cap</span>
                         </div>
-                        <span class="text-xs font-mono text-slate-500 block mt-1">Official Minimum Cap (20,000 TRY)</span>
                     </div>
                     <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-mono">
-                        <span class="text-slate-400">Currency Deficit:</span>
-                        <span class="text-rose-400 font-bold">-42.6% CPI Loss</span>
+                        <span class="text-slate-400">Deficit Gap:</span>
+                        <span class="text-rtcBlue font-bold">-$3,780.10 vs Caveo</span>
                     </div>
                 </div>
 
                 <!-- KAZAKHSTAN -->
-                <div class="bg-[#0D0C14] border border-white/5 p-6 rounded-2xl relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-rtcBlue"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <span class="text-[10px] font-mono text-slate-500 block uppercase">// REGION CIS</span>
+                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
                             <h4 class="text-lg font-bold text-white">Kazakhstan</h4>
+                            <span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest">// REGION_CIS</span>
                         </div>
-                        <span class="text-xs font-mono text-rtcBlue bg-rtcBlue/10 px-2 py-0.5 rounded border border-rtcBlue/20 font-bold">REFORM PHASE</span>
-                    </div>
-                    <div class="my-6">
-                        <div class="flex items-baseline gap-1">
-                          <span class="text-3xl font-extrabold font-mono text-white tracking-tight">$150</span>
-                          <span class="text-xs text-slate-400 font-mono">/mo</span>
+                        <div class="my-4">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-extrabold font-mono text-white tracking-tight">$150</span>
+                                <span class="text-xs text-slate-400 font-mono">/mo</span>
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-500 block mt-1">Based on 69,049 KZT floor minimum</span>
                         </div>
-                        <span class="text-xs font-mono text-slate-500 block mt-1">State Minimum Cap (69,049 KZT)</span>
                     </div>
                     <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-mono">
-                        <span class="text-slate-400">Basic Floor Index:</span>
-                        <span class="text-slate-300">35,596 KZT Basic</span>
+                        <span class="text-slate-400">Deficit Gap:</span>
+                        <span class="text-rtcBlue font-bold">-$4,065.10 vs Caveo</span>
                     </div>
                 </div>
 
                 <!-- UZBEKISTAN -->
-                <div class="bg-[#0D0C14] border border-white/5 p-6 rounded-2xl relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-rtcNeonPurple"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div>
-                            <span class="text-[10px] font-mono text-slate-500 block uppercase">// REGION CIS</span>
+                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
                             <h4 class="text-lg font-bold text-white">Uzbekistan</h4>
+                            <span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest">// REGION_CIS</span>
                         </div>
-                        <span class="text-xs font-mono text-rtcNeonPurple bg-rtcNeonPurple/10 px-2 py-0.5 rounded border border-rtcNeonPurple/20 font-bold">CRITICAL RISK</span>
-                    </div>
-                    <div class="my-6">
-                        <div class="flex items-baseline gap-1">
-                          <span class="text-3xl font-extrabold font-mono text-white tracking-tight">$100</span>
-                          <span class="text-xs text-slate-400 font-mono">/mo</span>
+                        <div class="my-4">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-3xl font-extrabold font-mono text-white tracking-tight">$100</span>
+                                <span class="text-xs text-slate-400 font-mono">/mo</span>
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-500 block mt-1">Based on base statutory floor levels</span>
                         </div>
-                        <span class="text-xs font-mono text-slate-500 block mt-1">Base Statutory Minimum</span>
                     </div>
                     <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-mono">
-                        <span class="text-slate-400">Coverage Gap:</span>
-                        <span class="text-rose-400 font-bold">Extreme Deficit</span>
+                        <span class="text-slate-400">Deficit Gap:</span>
+                        <span class="text-rtcBlue font-bold">-$4,115.10 vs Caveo</span>
                     </div>
                 </div>
 
