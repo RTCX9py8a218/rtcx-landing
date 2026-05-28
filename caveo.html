@@ -6,301 +6,326 @@
     <title>Caveo Pension Protocol | RTC X Ecosystem</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Premium Google Fonts -->
+    <!-- Premium Inter & Plus Jakarta Sans Fonts for High-End Corporate Feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
                         mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        terminalBlack: '#06050A',
-                        panelBg: '#0D0C14',
-                        rtcBlue: '#00D2FF',
-                        rtcNeonPurple: '#9D4EDD',
+                        corpBg: '#F8FAFC',
+                        corpPanel: '#FFFFFF',
+                        corpText: '#0F172A',
+                        corpMuted: '#64748B',
+                        brandBlue: '#0284C7',
+                        brandIndigo: '#4F46E5',
+                        brandEmerald: '#10B981'
                     }
                 }
             }
         }
     </script>
     <style>
-        .glow-text {
-            background: linear-gradient(135deg, #00D2FF 0%, #9D4EDD 100%);
+        .premium-shadow {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05), 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        .premium-card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.03), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0284C7 0%, #4F46E5 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .action-gradient {
-            background: linear-gradient(135deg, #00D2FF 0%, #9D4EDD 100%);
-        }
-        .crypto-glow {
-            box-shadow: 0 0 30px -5px rgba(0, 210, 255, 0.15);
-        }
     </style>
 </head>
-<body class="bg-terminalBlack text-slate-300 font-sans antialiased overflow-x-hidden text-lg">
+<body class="bg-corpBg text-corpText font-sans antialiased overflow-x-hidden text-base">
 
-    <!-- Global Header Banner -->
-    <header class="w-full border-b border-white/5 bg-terminalBlack/90 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
+    <!-- Global Corporate Navbar -->
+    <header class="w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-md sticky top-0 z-50 premium-shadow">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
             
-            <!-- Clean Header Brand Block (Text Hidden, Only Prominent Logo Displayed) -->
-            <a href="index.html" class="flex items-center gap-4 group">
-                <!-- Large, High-Visibility Logo Wrapper matching RTC X dimensions -->
-                <div class="h-20 w-48 rounded-xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-2 group-hover:border-rtcBlue transition-all">
-                    <img src="Caveo_Logo.png" alt="Caveo Logo" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2300D2FF%22 stroke-width=%222%22><rect width=%2220%22 height=%2220%22 x=%222%22 y=%222%22 rx=%224%22/><text x=%2250%25%22 y=%2255%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%226%22 font-family=%22sans-serif%22 font-weight=%22bold%22>CAVEO</text></svg>';" class="h-full w-full object-contain">
+            <!-- Clean Header Brand Block (Only Prominent RTC-X Sized Logo Asset Displayed) -->
+            <a href="index.html" class="flex items-center group">
+                <div class="h-20 w-48 rounded-xl overflow-hidden bg-slate-50 border border-slate-200/60 flex items-center justify-center p-2 group-hover:border-brandBlue transition-all">
+                    <img src="Caveo_Logo.png" alt="Caveo Logo" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%230284C7%22 stroke-width=%222%22><rect width=%2220%22 height=%2220%22 x=%222%22 y=%222%22 rx=%224%22/><text x=%2250%25%22 y=%2255%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%230F172A%22 font-size=%225%22 font-family=%22sans-serif%22 font-weight=%22bold%22>CAVEO</text></svg>';" class="h-full w-full object-contain">
                 </div>
             </a>
             
-            <!-- Network Telemetry Tracking Stack -->
-            <div class="flex items-center space-x-6 text-xs font-mono">
+            <!-- Network Telemetry & Utility Gateway Controls -->
+            <div class="flex items-center space-x-6 text-sm">
                 <div class="hidden md:flex flex-col text-right">
-                    <span class="text-slate-500">ROUTING LAYER INFRASTRUCTURE</span>
-                    <span class="text-emerald-400 font-bold animate-pulse">● PIPELINE ONLINE</span>
+                    <span class="text-xs font-mono text-corpMuted tracking-wider">ECOSYSTEM ROUTING POOL</span>
+                    <div class="flex items-center gap-1.5 justify-end mt-0.5">
+                        <span class="h-2 w-2 rounded-full bg-emerald-500 block"></span>
+                        <span class="text-xs font-semibold text-emerald-600">CONNECTED</span>
+                    </div>
                 </div>
-                <a href="index.html" class="bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 px-4 py-2.5 rounded-xl transition text-xs font-bold tracking-wider uppercase font-mono">
-                    ← Portal Gate
+                <a href="index.html" class="bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-medium px-5 py-2.5 rounded-xl transition text-sm shadow-sm">
+                    Back to Portal
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- App Viewport Wrapper -->
-    <main class="py-12 max-w-7xl mx-auto px-6">
+    <!-- Main Dynamic Application Content Container -->
+    <main class="py-14 max-w-7xl mx-auto px-6">
         
-        <!-- Application Architecture Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Top Tier Configuration Console Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             
-            <!-- Interactive Yield Terminal Configuration -->
-            <section class="lg:col-span-2 bg-panelBg border border-white/5 rounded-3xl p-8 crypto-glow flex flex-col justify-between">
+            <!-- Interactive Yield Dashboard Profile Controls -->
+            <section class="lg:col-span-2 bg-corpPanel border border-slate-200/80 rounded-3xl p-8 premium-card-shadow flex flex-col justify-between">
                 <div>
-                    <div class="flex justify-between items-center border-b border-white/5 pb-4 mb-6">
-                        <span class="text-xs font-mono tracking-widest text-rtcBlue uppercase font-bold">// Capital Routing Controls</span>
-                        <span class="text-xs font-mono text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-500/20">POLS ACTIVE</span>
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-4 mb-6">
+                        <span class="text-xs font-mono font-bold tracking-wider text-brandBlue uppercase">// Capital Routing Parameters</span>
+                        <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">v2.4 Production</span>
                     </div>
 
-                    <h1 class="text-3xl font-extrabold text-white tracking-tight mb-2">Automated Pension Vaults</h1>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
-                        Configure alternative capital exposure levels. Deposits route programmatically into yield-bearing real-world tokenized assets (RWA) and delta-neutral algorithmic liquidity arrays.
+                    <h1 class="text-3xl font-extrabold text-slate-900 font-display tracking-tight mb-3">Enterprise Pension Allocations</h1>
+                    <p class="text-corpMuted text-sm leading-relaxed mb-8 max-w-2xl">
+                        Optimize corporate and personal capital routing paths. Funds are systematically distributed into institution-grade asset configurations, balancing short-term sovereign tokenized debt with premium delta-neutral mechanics.
                     </p>
 
-                    <!-- User Entry Simulation Elements -->
+                    <!-- Interactive Strategy Selection Form Elements -->
                     <div class="space-y-6">
                         <div>
-                            <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Target Monthly Contribution ($ USD)</label>
-                            <input type="number" placeholder="500" class="w-full bg-terminalBlack border border-white/10 rounded-xl px-4 py-3.5 text-white font-mono focus:outline-none focus:border-rtcBlue transition text-base">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Target Contribution (USD / Month)</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">$</span>
+                                <input type="number" placeholder="500" class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-8 pr-4 py-3.5 text-slate-900 font-mono font-bold focus:outline-none focus:border-brandBlue focus:bg-white transition text-base">
+                            </div>
                         </div>
 
                         <div>
-                            <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Asset Allocation Profile Risk</label>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Risk Allocation Profile Preset</label>
                             <div class="grid grid-cols-3 gap-4">
-                                <button class="bg-terminalBlack border border-white/5 hover:border-white/10 text-slate-400 rounded-xl py-3 text-xs font-mono font-bold tracking-wider uppercase transition">Conservative</button>
-                                <button class="bg-terminalBlack border-2 border-rtcBlue text-white rounded-xl py-3 text-xs font-mono font-bold tracking-wider uppercase transition">Moderate (Balanced)</button>
-                                <button class="bg-terminalBlack border border-white/5 hover:border-white/10 text-slate-400 rounded-xl py-3 text-xs font-mono font-bold tracking-wider uppercase transition">Aggressive</button>
+                                <button class="bg-white border border-slate-200 text-slate-600 hover:border-slate-300 font-medium rounded-xl py-3 text-xs tracking-wider uppercase transition">Conservative</button>
+                                <button class="bg-white border-2 border-brandBlue text-brandBlue font-bold rounded-xl py-3 text-xs tracking-wider uppercase transition bg-sky-50/20">Moderate (Balanced)</button>
+                                <button class="bg-white border border-slate-200 text-slate-600 hover:border-slate-300 font-medium rounded-xl py-3 text-xs tracking-wider uppercase transition">Aggressive</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-8 pt-6 border-t border-white/5">
-                    <button class="w-full action-gradient text-terminalBlack font-mono font-extrabold py-4 rounded-xl text-sm transition hover:opacity-95 uppercase tracking-wider shadow-lg shadow-rtcBlue/10">
-                        Initialize Smart Contract Pension Pipeline
+                <div class="mt-10 pt-6 border-t border-slate-100">
+                    <button class="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-4 rounded-xl text-sm transition uppercase tracking-wider font-display font-bold shadow-md shadow-slate-900/10">
+                        Authorize Allocation Execution Sequence
                     </button>
                 </div>
             </section>
 
-            <!-- Dynamic Yield Performance Summary -->
-            <section class="bg-panelBg border border-white/5 rounded-3xl p-8 flex flex-col justify-between">
+            <!-- Institutional Target Metric Matrix -->
+            <section class="bg-corpPanel border border-slate-200/80 rounded-3xl p-8 premium-card-shadow flex flex-col justify-between">
                 <div>
-                    <span class="text-xs font-mono tracking-widest text-purple-400 uppercase font-bold block mb-4">// Live Yield Projections</span>
+                    <span class="text-xs font-mono font-bold tracking-wider text-brandIndigo uppercase block mb-4">// Yield Analytics</span>
                     
-                    <div class="space-y-6">
-                        <div class="p-4 bg-terminalBlack rounded-xl border border-white/5">
-                            <span class="text-xs font-mono text-slate-500 block">CAVEO TARGET MATURITY APY</span>
-                            <span class="text-4xl font-extrabold font-mono tracking-tight text-white glow-text">11.64%</span>
+                    <div class="space-y-5">
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100">
+                            <span class="text-xs font-bold text-corpMuted block mb-1">TARGET PORTFOLIO APY</span>
+                            <span class="text-4xl font-extrabold tracking-tight font-display gradient-text">11.64%</span>
                         </div>
 
-                        <div class="p-4 bg-terminalBlack rounded-xl border border-white/5">
-                            <span class="text-xs font-mono text-slate-500 block">ESTIMATED 25-YEAR PORTFOLIO VALUE</span>
-                            <span class="text-2xl font-bold font-mono tracking-tight text-white">$674,821.50</span>
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100">
+                            <span class="text-xs font-bold text-corpMuted block mb-1">ESTIMATED MATURITY ASSET POOL (25 YR)</span>
+                            <span class="text-2xl font-bold tracking-tight font-display text-slate-900">$674,821.50</span>
                         </div>
 
-                        <div class="p-4 bg-terminalBlack rounded-xl border border-white/5">
-                            <span class="text-xs font-mono text-slate-500 block">MONTHLY PROGRAMMATIC PAYOUT</span>
-                            <span class="text-2xl font-bold font-mono tracking-tight text-emerald-400">$4,215.10</span>
+                        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100">
+                            <span class="text-xs font-bold text-corpMuted block mb-1">PROJECTED MONTHLY REVENUE DISTRIBUTION</span>
+                            <span class="text-2xl font-bold tracking-tight font-display text-brandEmerald">$4,215.10</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="text-[11px] font-mono text-slate-500 leading-normal mt-6">
-                    ⚠️ Projections are computed programmatically under active asset treasury mechanics and pool demand matrices. Past protocol yield metrics do not guarantee linear future payouts.
+                <div class="text-[11px] text-corpMuted leading-relaxed mt-6 border-t border-slate-100 pt-4">
+                    Values are dynamic matrix computations optimized against baseline treasury models. Historical performance maps do not secure future yield constants.
                 </div>
             </section>
 
         </div>
 
-        <!-- Fully Re-engineered Product Cards: Every Card Lists the Strategy Composition Elements Concurrently -->
+        <!-- Overhauled Products & Complete Asset Composition Layer -->
         <section class="mb-16">
-            <div class="border-b border-white/5 pb-4 mb-8">
-                <h3 class="text-xs font-mono tracking-widest text-slate-500 uppercase font-bold">// Active Deployment Products & Complete Strategy Breakdown</h3>
+            <div class="border-b border-slate-200 pb-4 mb-8">
+                <h3 class="text-xs font-mono font-bold tracking-widest text-corpMuted uppercase">// Active Pipeline Modulators & Structural Underlyings</h3>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- PRODUCT 1: Core System Routing -->
-                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl hover:border-rtcBlue/20 transition group flex flex-col justify-between">
+                <!-- PRODUCT 01 CARD -->
+                <div class="bg-corpPanel border border-slate-200/80 p-6 rounded-2xl premium-card-shadow flex flex-col justify-between hover:border-brandBlue/40 transition">
                     <div>
-                        <div class="h-10 w-10 bg-rtcBlue/10 border border-rtcBlue/20 rounded-xl flex items-center justify-center font-mono font-bold text-rtcBlue mb-4 group-hover:bg-rtcBlue/20 transition">
+                        <div class="h-10 w-10 bg-sky-50 text-brandBlue border border-sky-100 rounded-xl flex items-center justify-center text-sm font-mono font-bold mb-4">
                             01
                         </div>
-                        <h4 class="text-base font-bold text-white mb-2">STRC Routing Pipeline</h4>
-                        <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Core system pipeline layer parsing base account transactions into primary yield execution pools.</p>
+                        <h4 class="text-lg font-bold text-slate-900 font-display mb-2">STRC Routing Pipeline</h4>
+                        <p class="text-xs text-corpMuted leading-relaxed mb-6">Executes programmatic ledger routing logic, prioritizing primary network allocation rules into baseline yield vaults.</p>
                     </div>
                     
-                    <!-- Direct Underlyings Layout containing ALL assets in the strategy basket -->
-                    <div class="space-y-4 border-t border-white/5 pt-4">
-                        <span class="text-[10px] text-slate-500 block font-mono uppercase tracking-wider">// Strategy Composition</span>
+                    <!-- Full Transparent Asset Breakdown Container -->
+                    <div class="space-y-4 border-t border-slate-100 pt-5">
+                        <span class="text-[10px] text-slate-400 font-mono font-bold uppercase tracking-wider block">// Strategy Weights</span>
+                        
+                        <!-- Asset 1 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-300 font-bold">STRC Engine</span>
-                                <span class="text-rtcBlue font-bold">50%</span>
+                            <div class="flex justify-between items-center text-xs font-medium mb-1.5">
+                                <span class="text-slate-700">STRC Engine Base</span>
+                                <span class="text-brandBlue font-mono font-bold">50%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-rtcBlue h-full rounded-full" style="width: 50%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-brandBlue h-full rounded-full" style="width: 50%;"></div>
                             </div>
                         </div>
+                        <!-- Asset 2 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-400">ONDO Treasuries</span>
-                                <span class="text-slate-400 font-bold">25%</span>
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-1.5">
+                                <span>ONDO Treasuries</span>
+                                <span class="font-mono">25%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-purple-500/40 h-full rounded-full" style="width: 25%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-slate-300 h-full rounded-full" style="width: 25%;"></div>
                             </div>
                         </div>
+                        <!-- Asset 3 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-400">USDe Pools</span>
-                                <span class="text-slate-400 font-bold">15%</span>
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-1.5">
+                                <span>USDe Liquidity Pools</span>
+                                <span class="font-mono">15%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-emerald-400/40 h-full rounded-full" style="width: 15%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-slate-300 h-full rounded-full" style="width: 15%;"></div>
                             </div>
                         </div>
+                        <!-- Asset 4 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-400">SATA Yield Array</span>
-                                <span class="text-slate-400 font-bold">10%</span>
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-1.5">
+                                <span>SATA Yield Optimization</span>
+                                <span class="font-mono">10%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-slate-600 h-full rounded-full" style="width: 10%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-slate-300 h-full rounded-full" style="width: 10%;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PRODUCT 2: Tokenized Treasuries -->
-                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl hover:border-rtcBlue/20 transition group flex flex-col justify-between">
+                <!-- PRODUCT 02 CARD -->
+                <div class="bg-corpPanel border border-slate-200/80 p-6 rounded-2xl premium-card-shadow flex flex-col justify-between hover:border-brandIndigo/40 transition">
                     <div>
-                        <div class="h-10 w-10 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center font-mono font-bold text-purple-400 mb-4 group-hover:bg-purple-500/20 transition">
+                        <div class="h-10 w-10 bg-indigo-50 text-brandIndigo border border-indigo-100 rounded-xl flex items-center justify-center text-sm font-mono font-bold mb-4">
                             02
                         </div>
-                        <h4 class="text-base font-bold text-white mb-2">Tokenized Debt Vaults</h4>
-                        <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Low-volatility tokenized short-term sovereign debt allocation maintaining foundational capital structures.</p>
+                        <h4 class="text-lg font-bold text-slate-900 font-display mb-2">Tokenized Debt Vaults</h4>
+                        <p class="text-xs text-corpMuted leading-relaxed mb-6">Captures premium short-term sovereign debt structures utilizing low-volatility asset frameworks to secure capital stability.</p>
                     </div>
                     
-                    <!-- Direct Underlyings Layout containing ALL assets in the strategy basket -->
-                    <div class="space-y-4 border-t border-white/5 pt-4">
-                        <span class="text-[10px] text-slate-500 block font-mono uppercase tracking-wider">// Strategy Composition</span>
+                    <!-- Full Transparent Asset Breakdown Container -->
+                    <div class="space-y-4 border-t border-slate-100 pt-5">
+                        <span class="text-[10px] text-slate-400 font-mono font-bold uppercase tracking-wider block">// Strategy Weights</span>
+                        
+                        <!-- Asset 1 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-400">STRC Engine</span>
-                                <span class="text-slate-400 font-bold">50%</span>
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-1.5">
+                                <span>STRC Engine Base</span>
+                                <span class="font-mono">50%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-rtcBlue/40 h-full rounded-full" style="width: 50%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-slate-300 h-full rounded-full" style="width: 50%;"></div>
                             </div>
                         </div>
+                        <!-- Asset 2 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-300 font-bold">ONDO Treasuries</span>
-                                <span class="text-purple-400 font-bold">25%</span>
+                            <div class="flex justify-between items-center text-xs font-medium mb-1.5">
+                                <span class="text-slate-700">ONDO Treasuries</span>
+                                <span class="text-brandIndigo font-mono font-bold">25%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-purple-500 h-full rounded-full" style="width: 25%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-brandIndigo h-full rounded-full" style="width: 25%;"></div>
                             </div>
                         </div>
+                        <!-- Asset 3 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-400">USDe Pools</span>
-                                <span class="text-slate-400 font-bold">15%</span>
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-1.5">
+                                <span>USDe Liquidity Pools</span>
+                                <span class="font-mono">15%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-emerald-400/40 h-full rounded-full" style="width: 15%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-slate-300 h-full rounded-full" style="width: 15%;"></div>
                             </div>
                         </div>
+                        <!-- Asset 4 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-400">SATA Yield Array</span>
-                                <span class="text-slate-400 font-bold">10%</span>
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-1.5">
+                                <span>SATA Yield Optimization</span>
+                                <span class="font-mono">10%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-slate-600 h-full rounded-full" style="width: 10%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-slate-300 h-full rounded-full" style="width: 10%;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PRODUCT 3: Delta Neutral & Yield Arrays -->
-                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl hover:border-rtcBlue/20 transition group flex flex-col justify-between">
+                <!-- PRODUCT 03 CARD -->
+                <div class="bg-corpPanel border border-slate-200/80 p-6 rounded-2xl premium-card-shadow flex flex-col justify-between hover:border-brandEmerald/40 transition">
                     <div>
-                        <div class="h-10 w-10 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center font-mono font-bold text-emerald-400 mb-4 group-hover:bg-emerald-500/20 transition">
+                        <div class="h-10 w-10 bg-emerald-50 text-brandEmerald border border-emerald-100 rounded-xl flex items-center justify-center text-sm font-mono font-bold mb-4">
                             03
                         </div>
-                        <h4 class="text-base font-bold text-white mb-2">Delta-Neutral Yield Collateral</h4>
-                        <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Delta-neutral hedging frameworks running perpetual funding basis arbitrage mechanics.</p>
+                        <h4 class="text-lg font-bold text-slate-900 font-display mb-2">Delta-Neutral Collateral</h4>
+                        <p class="text-xs text-corpMuted leading-relaxed mb-6">Runs complex hedging paradigms using perpetual basis delta configurations to optimize continuous fee capture matrix.</p>
                     </div>
                     
-                    <!-- Direct Underlyings Layout containing ALL assets in the strategy basket -->
-                    <div class="space-y-4 border-t border-white/5 pt-4">
-                        <span class="text-[10px] text-slate-500 block font-mono uppercase tracking-wider">// Strategy Composition</span>
+                    <!-- Full Transparent Asset Breakdown Container -->
+                    <div class="space-y-4 border-t border-slate-100 pt-5">
+                        <span class="text-[10px] text-slate-400 font-mono font-bold uppercase tracking-wider block">// Strategy Weights</span>
+                        
+                        <!-- Asset 1 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-400">STRC Engine</span>
-                                <span class="text-slate-400 font-bold">50%</span>
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-1.5">
+                                <span>STRC Engine Base</span>
+                                <span class="font-mono">50%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-rtcBlue/40 h-full rounded-full" style="width: 50%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-slate-300 h-full rounded-full" style="width: 50%;"></div>
                             </div>
                         </div>
+                        <!-- Asset 2 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-400">ONDO Treasuries</span>
-                                <span class="text-slate-400 font-bold">25%</span>
+                            <div class="flex justify-between items-center text-xs text-slate-500 mb-1.5">
+                                <span>ONDO Treasuries</span>
+                                <span class="font-mono">25%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-purple-500/40 h-full rounded-full" style="width: 25%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-slate-300 h-full rounded-full" style="width: 25%;"></div>
                             </div>
                         </div>
+                        <!-- Asset 3 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-300 font-bold">USDe Pools</span>
-                                <span class="text-emerald-400 font-bold">15%</span>
+                            <div class="flex justify-between items-center text-xs font-medium mb-1.5">
+                                <span class="text-slate-700">USDe Liquidity Pools</span>
+                                <span class="text-brandEmerald font-mono font-bold">15%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
-                                <div class="bg-emerald-400 h-full rounded-full" style="width: 15%;"></div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-brandEmerald h-full rounded-full" style="width: 15%;"></div>
                             </div>
                         </div>
+                        <!-- Asset 4 -->
                         <div>
-                            <div class="flex justify-between items-center text-xs font-mono mb-1">
-                                <span class="text-slate-300 font-bold">SATA Yield Array</span>
-                                <span class="text-slate-400 font-bold">10%</span>
+                            <div class="flex justify-between items-center text-xs font-medium mb-1.5">
+                                <span class="text-slate-700">SATA Yield Optimization</span>
+                                <span class="text-slate-900 font-mono font-bold">10%</span>
                             </div>
-                            <div class="w-full bg-terminalBlack h-1.5 rounded-full overflow-hidden p-0 border border-white/5">
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
                                 <div class="bg-slate-500 h-full rounded-full" style="width: 10%;"></div>
                             </div>
                         </div>
@@ -310,94 +335,93 @@
             </div>
         </section>
 
-        <!-- Sovereign Pension Deficit Radar Grid Architecture with Red Badging Logic -->
-        <section class="mb-16">
-            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-white/5 pb-4 mb-8 gap-2">
+        <!-- Premium Clean Sovereign Deficit Index Analytics Grid -->
+        <section class="mb-12">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-slate-200 pb-4 mb-8 gap-2">
                 <div>
-                    <h2 class="text-xl font-bold text-white font-mono uppercase tracking-wider">Sovereign Pension Deficit Radar</h2>
-                    <p class="text-xs text-slate-500 font-mono mt-1">Sovereign monthly baseline calculations converted to uniform USD metrics</p>
+                    <h2 class="text-xl font-bold text-slate-900 font-display tracking-tight">Sovereign Pension Deficit Analytics</h2>
+                    <p class="text-xs text-corpMuted mt-1">Sovereign monthly structural baselines evaluated against dynamic modern USD asset indexing formulas</p>
                 </div>
-                <div class="flex items-center gap-2 text-xs font-mono bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
-                    <span class="text-rtcBlue animate-pulse">●</span>
-                    <span class="text-slate-400">INDEX LAYER: <span class="text-white font-bold">USD SPOT ROUTING</span></span>
+                <div class="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200/60">
+                    INDEX BASELINING RATE: <span class="text-slate-900 font-bold">USD CONVERSION SPOT</span>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
                 <!-- MALTA -->
-                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between min-h-[190px]">
+                <div class="bg-corpPanel border border-slate-200/80 p-6 rounded-2xl premium-card-shadow flex flex-col justify-between min-h-[180px]">
                     <div>
-                        <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-3">
-                            <h4 class="text-base font-bold text-white">Malta</h4>
-                            <span class="text-[9px] font-mono text-slate-500 uppercase tracking-widest">REGION_EU</span>
+                        <div class="flex justify-between items-center border-b border-slate-100 pb-2 mb-3">
+                            <h4 class="text-sm font-bold text-slate-800">Malta</h4>
+                            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">EU_ZONE</span>
                         </div>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-2xl font-extrabold font-mono text-white tracking-tight">$1,032</span>
-                            <span class="text-xs text-slate-500 font-mono">/mo</span>
+                        <div class="flex items-baseline gap-0.5">
+                            <span class="text-2xl font-bold font-mono text-slate-900">$1,032</span>
+                            <span class="text-xs text-corpMuted">/mo</span>
                         </div>
-                        <p class="text-[11px] font-mono text-slate-500 mt-1 leading-normal">Based on €221.78/wk legislative baseline</p>
+                        <p class="text-[11px] text-corpMuted mt-1">Statutory legislative target pool rate</p>
                     </div>
-                    <div class="pt-3 border-t border-white/5 flex justify-between items-center text-[11px] font-mono">
-                        <span class="text-slate-400">Monthly Deficit:</span>
-                        <span class="font-bold bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded border border-rose-500/20">-$3,183.10</span>
+                    <div class="pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-corpMuted">Deficit Offset:</span>
+                        <span class="font-mono font-bold bg-rose-50 text-rose-600 px-2 py-0.5 rounded border border-rose-100">-$3,183.10</span>
                     </div>
                 </div>
 
                 <!-- TURKEY -->
-                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between min-h-[190px]">
+                <div class="bg-corpPanel border border-slate-200/80 p-6 rounded-2xl premium-card-shadow flex flex-col justify-between min-h-[180px]">
                     <div>
-                        <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-3">
-                            <h4 class="text-base font-bold text-white">Turkey</h4>
-                            <span class="text-[9px] font-mono text-slate-500 uppercase tracking-widest">REGION_TR</span>
+                        <div class="flex justify-between items-center border-b border-slate-100 pb-2 mb-3">
+                            <h4 class="text-sm font-bold text-slate-800">Turkey</h4>
+                            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">TR_ZONE</span>
                         </div>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-2xl font-extrabold font-mono text-white tracking-tight">$436</span>
-                            <span class="text-xs text-slate-500 font-mono">/mo</span>
+                        <div class="flex items-baseline gap-0.5">
+                            <span class="text-2xl font-bold font-mono text-slate-900">$436</span>
+                            <span class="text-xs text-corpMuted">/mo</span>
                         </div>
-                        <p class="text-[11px] font-mono text-slate-500 mt-1 leading-normal">Based on 20,000 TRY statutory index cap</p>
+                        <p class="text-[11px] text-corpMuted mt-1">20,000 TRY maximum index threshold cap</p>
                     </div>
-                    <div class="pt-3 border-t border-white/5 flex justify-between items-center text-[11px] font-mono">
-                        <span class="text-slate-400">Monthly Deficit:</span>
-                        <span class="font-bold bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded border border-rose-500/20">-$3,779.10</span>
+                    <div class="pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-corpMuted">Deficit Offset:</span>
+                        <span class="font-mono font-bold bg-rose-50 text-rose-600 px-2 py-0.5 rounded border border-rose-100">-$3,779.10</span>
                     </div>
                 </div>
 
                 <!-- KAZAKHSTAN -->
-                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between min-h-[190px]">
+                <div class="bg-corpPanel border border-slate-200/80 p-6 rounded-2xl premium-card-shadow flex flex-col justify-between min-h-[180px]">
                     <div>
-                        <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-3">
-                            <h4 class="text-base font-bold text-white">Kazakhstan</h4>
-                            <span class="text-[9px] font-mono text-slate-500 uppercase tracking-widest">REGION_CIS</span>
+                        <div class="flex justify-between items-center border-b border-slate-100 pb-2 mb-3">
+                            <h4 class="text-sm font-bold text-slate-800">Kazakhstan</h4>
+                            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">CIS_ZONE</span>
                         </div>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-2xl font-extrabold font-mono text-white tracking-tight">$142</span>
-                            <span class="text-xs text-slate-500 font-mono">/mo</span>
+                        <div class="flex items-baseline gap-0.5">
+                            <span class="text-2xl font-bold font-mono text-slate-900">$142</span>
+                            <span class="text-xs text-corpMuted">/mo</span>
                         </div>
-                        <p class="text-[11px] font-mono text-slate-500 mt-1 leading-normal">Based on 69,049 KZT floor minimum</p>
+                        <p class="text-[11px] text-corpMuted mt-1">69,049 KZT statutory index minimum</p>
                     </div>
-                    <div class="pt-3 border-t border-white/5 flex justify-between items-center text-[11px] font-mono">
-                        <span class="text-slate-400">Monthly Deficit:</span>
-                        <span class="font-bold bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded border border-rose-500/20">-$4,073.10</span>
+                    <div class="pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-corpMuted">Deficit Offset:</span>
+                        <span class="font-mono font-bold bg-rose-50 text-rose-600 px-2 py-0.5 rounded border border-rose-100">-$4,073.10</span>
                     </div>
                 </div>
 
                 <!-- UZBEKISTAN -->
-                <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between min-h-[190px]">
+                <div class="bg-corpPanel border border-slate-200/80 p-6 rounded-2xl premium-card-shadow flex flex-col justify-between min-h-[180px]">
                     <div>
-                        <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-3">
-                            <h4 class="text-base font-bold text-white">Uzbekistan</h4>
-                            <span class="text-[9px] font-mono text-slate-500 uppercase tracking-widest">REGION_CIS</span>
+                        <div class="flex justify-between items-center border-b border-slate-100 pb-2 mb-3">
+                            <h4 class="text-sm font-bold text-slate-800">Uzbekistan</h4>
+                            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">CIS_ZONE</span>
                         </div>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-2xl font-extrabold font-mono text-white tracking-tight">$69</span>
-                            <span class="text-xs text-slate-500 font-mono">/mo</span>
+                        <div class="flex items-baseline gap-0.5">
+                            <span class="text-2xl font-bold font-mono text-slate-900">$69</span>
+                            <span class="text-xs text-corpMuted">/mo</span>
                         </div>
-                        <p class="text-[11px] font-mono text-slate-500 mt-1 leading-normal">Based on base statutory floor levels</p>
+                        <p class="text-[11px] text-corpMuted mt-1">State floor target statutory criteria</p>
                     </div>
-                    <div class="pt-3 border-t border-white/5 flex justify-between items-center text-[11px] font-mono">
-                        <span class="text-slate-400">Monthly Deficit:</span>
-                        <span class="font-bold bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded border border-rose-500/20">-$4,146.10</span>
+                    <div class="pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="text-corpMuted">Deficit Offset:</span>
+                        <span class="font-mono font-bold bg-rose-50 text-rose-600 px-2 py-0.5 rounded border border-rose-100">-$4,146.10</span>
                     </div>
                 </div>
 
@@ -406,15 +430,15 @@
 
     </main>
 
-    <!-- Operational System Footer -->
-    <footer class="border-t border-white/5 bg-terminalBlack py-12 text-xs text-slate-600 mt-20">
+    <!-- Clean Corporate System Footer -->
+    <footer class="border-t border-slate-200 bg-white py-12 text-xs text-slate-500 mt-16">
         <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
-                <p class="font-bold text-slate-400 font-mono mb-1">CAVEO RETIREMENT ARCHITECTURE</p>
-                <p>© 2026 RTC X Engine. Core pipeline layers interface directly into non-custodial capital networks.</p>
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wider">Caveo Pension Network Layer</p>
+                <p>© 2026 RTC X Engine Ecosystem. Assets deployed process directly via programmatic smart contract settlement layers.</p>
             </div>
-            <div class="font-mono text-[11px] text-rtcBlue/40 tracking-widest">
-                ROUTING INTEGRITY ENCRYPTED
+            <div class="font-mono text-xs font-semibold text-slate-400 tracking-wider">
+                COMPLIANCE INDEX ACTIVE
             </div>
         </div>
     </footer>
