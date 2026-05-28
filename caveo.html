@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caveo Pension Protocol | RTC X Ecosystem</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -43,12 +45,15 @@
 </head>
 <body class="bg-terminalBlack text-slate-300 font-sans antialiased overflow-x-hidden text-lg">
 
+    <!-- Global Header Banner -->
     <header class="w-full border-b border-white/5 bg-terminalBlack/90 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
             
+            <!-- Core Brand Link using the Exact Caveo_Logo.png Asset -->
             <a href="index.html" class="flex items-center gap-4 group">
+                <!-- Exact Caveo Image Asset Integration -->
                 <div class="h-14 w-14 rounded-xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-1 group-hover:border-rtcBlue transition-all">
-                    <img src="Caveo_Logo.png" alt="Caveo Logo" class="h-full w-full object-contain">
+                    <img src="Caveo_Logo.png" alt="Caveo Logo" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2300D2FF%22 stroke-width=%222%22><rect width=%2220%22 height=%2220%22 x=%222%22 y=%222%22 rx=%224%22/></svg>';" class="h-full w-full object-contain">
                 </div>
                 
                 <div class="h-8 w-px bg-white/10 hidden sm:block"></div>
@@ -59,6 +64,7 @@
                 </div>
             </a>
             
+            <!-- Network Telemetry Tracking Stack -->
             <div class="flex items-center space-x-6 text-xs font-mono">
                 <div class="hidden md:flex flex-col text-right">
                     <span class="text-slate-500">ROUTING LAYER INFRASTRUCTURE</span>
@@ -71,10 +77,13 @@
         </div>
     </header>
 
+    <!-- App Viewport Wrapper -->
     <main class="py-12 max-w-7xl mx-auto px-6">
         
+        <!-- Application Architecture Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             
+            <!-- Interactive Yield Terminal Configuration -->
             <section class="lg:col-span-2 bg-panelBg border border-white/5 rounded-3xl p-8 crypto-glow flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-center border-b border-white/5 pb-4 mb-6">
@@ -87,6 +96,7 @@
                         Configure alternative capital exposure levels. Deposits route programmatically into yield-bearing real-world tokenized assets (RWA) and delta-neutral algorithmic liquidity arrays.
                     </p>
 
+                    <!-- User Entry Simulation Elements -->
                     <div class="space-y-6">
                         <div>
                             <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">Target Monthly Contribution ($ USD)</label>
@@ -111,6 +121,7 @@
                 </div>
             </section>
 
+            <!-- Dynamic Yield Performance Summary -->
             <section class="bg-panelBg border border-white/5 rounded-3xl p-8 flex flex-col justify-between">
                 <div>
                     <span class="text-xs font-mono tracking-widest text-purple-400 uppercase font-bold block mb-4">// Live Yield Projections</span>
@@ -140,63 +151,95 @@
 
         </div>
 
+        <!-- Corrected Product Section: Asset Underlyings and Percentages Visualized via Metric Allocation Bars -->
         <section class="mb-16">
             <div class="border-b border-white/5 pb-4 mb-8">
-                <h3 class="text-xs font-mono tracking-widest text-slate-500 uppercase font-bold">// Active Deployment Products & Core Asset Tier Backing</h3>
+                <h3 class="text-xs font-mono tracking-widest text-slate-500 uppercase font-bold">// Active Deployment Products & Underlying Asset Allocations</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
+                <!-- PRODUCT 1: Core System Routing -->
                 <div class="bg-panelBg border border-white/5 p-6 rounded-2xl hover:border-rtcBlue/20 transition group flex flex-col justify-between">
                     <div>
                         <div class="h-10 w-10 bg-rtcBlue/10 border border-rtcBlue/20 rounded-xl flex items-center justify-center font-mono font-bold text-rtcBlue mb-4 group-hover:bg-rtcBlue/20 transition">
                             01
                         </div>
-                        <h4 class="text-base font-bold text-white mb-2">STRC Engine Routing Layer</h4>
-                        <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Sovereign Treasury Tokenization Router Component processing core account liquidity layers into cross-network pipelines.</p>
+                        <h4 class="text-base font-bold text-white mb-2">STRC Routing Pipeline</h4>
+                        <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Core system pipeline layer parsing base account transactions into primary yield execution pools.</p>
                     </div>
-                    <div class="space-y-2 border-t border-white/5 pt-4">
-                        <span class="text-[10px] text-slate-500 block font-mono uppercase tracking-wider">Underlying Strategy Allocation:</span>
-                        <div class="bg-terminalBlack p-2.5 rounded-xl border border-white/5 font-mono flex justify-between items-center text-xs">
-                            <span class="text-slate-300">STRC Core Router</span>
-                            <span class="text-rtcBlue font-bold bg-rtcBlue/10 px-2 py-0.5 rounded border border-rtcBlue/20">50% Allocation</span>
+                    
+                    <!-- Direct Underlyings Layout with Percent Bar -->
+                    <div class="space-y-4 border-t border-white/5 pt-4">
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                                <span class="text-slate-300 font-bold">STRC Engine</span>
+                                <span class="text-rtcBlue font-bold">50%</span>
+                            </div>
+                            <!-- Allocation Track -->
+                            <div class="w-full bg-terminalBlack h-2 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-rtcBlue h-full rounded-full" style="width: 50%;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- PRODUCT 2: Tokenized Treasuries -->
                 <div class="bg-panelBg border border-white/5 p-6 rounded-2xl hover:border-rtcBlue/20 transition group flex flex-col justify-between">
                     <div>
                         <div class="h-10 w-10 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center font-mono font-bold text-purple-400 mb-4 group-hover:bg-purple-500/20 transition">
                             02
                         </div>
-                        <h4 class="text-base font-bold text-white mb-2">Tokenized RWA Treasury Backing</h4>
-                        <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Direct institutional collateralization channels securing underlying capital value using tokenized global short-term debt reserves.</p>
+                        <h4 class="text-base font-bold text-white mb-2">Tokenized Debt Vaults</h4>
+                        <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Low-volatility tokenized short-term sovereign debt allocation maintaining foundational capital structures.</p>
                     </div>
-                    <div class="space-y-2 border-t border-white/5 pt-4">
-                        <span class="text-[10px] text-slate-500 block font-mono uppercase tracking-wider">Underlying Strategy Allocation:</span>
-                        <div class="bg-terminalBlack p-2.5 rounded-xl border border-white/5 font-mono flex justify-between items-center text-xs">
-                            <span class="text-slate-300">Ondo Tokenized Treasuries</span>
-                            <span class="text-purple-400 font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">25% Allocation</span>
+                    
+                    <!-- Direct Underlyings Layout with Percent Bar -->
+                    <div class="space-y-4 border-t border-white/5 pt-4">
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                                <span class="text-slate-300 font-bold">ONDO Treasuries</span>
+                                <span class="text-purple-400 font-bold">25%</span>
+                            </div>
+                            <!-- Allocation Track -->
+                            <div class="w-full bg-terminalBlack h-2 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-purple-500 h-full rounded-full" style="width: 25%;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- PRODUCT 3: Delta Neutral & Yield Arrays -->
                 <div class="bg-panelBg border border-white/5 p-6 rounded-2xl hover:border-rtcBlue/20 transition group flex flex-col justify-between">
                     <div>
                         <div class="h-10 w-10 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center font-mono font-bold text-emerald-400 mb-4 group-hover:bg-emerald-500/20 transition">
                             03
                         </div>
-                        <h4 class="text-base font-bold text-white mb-2">Algorithmic Structured Yield Arrays</h4>
-                        <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Delta-neutral hedging layers and smart execution matrices running perpetual market funding basis arbitrage pipelines.</p>
+                        <h4 class="text-base font-bold text-white mb-2">Delta-Neutral Yield Collateral</h4>
+                        <p class="text-xs text-slate-400 font-mono leading-relaxed mb-6">Delta-neutral hedging frameworks running perpetual funding basis arbitrage mechanics.</p>
                     </div>
-                    <div class="space-y-2 border-t border-white/5 pt-4">
-                        <span class="text-[10px] text-slate-500 block font-mono uppercase tracking-wider">Underlying Strategy Allocation:</span>
-                        <div class="bg-terminalBlack p-2.5 rounded-xl border border-white/5 font-mono flex justify-between items-center text-xs mb-2">
-                            <span class="text-slate-300">Ethena USDe Pools</span>
-                            <span class="text-emerald-400 font-bold bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-500/20">15% Allocation</span>
+                    
+                    <!-- Direct Underlyings Layout with Percent Bars -->
+                    <div class="space-y-4 border-t border-white/5 pt-4">
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                                <span class="text-slate-300 font-bold">USDe Pools</span>
+                                <span class="text-emerald-400 font-bold">15%</span>
+                            </div>
+                            <!-- Allocation Track -->
+                            <div class="w-full bg-terminalBlack h-2 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-emerald-400 h-full rounded-full" style="width: 15%;"></div>
+                            </div>
                         </div>
-                        <div class="bg-terminalBlack p-2.5 rounded-xl border border-white/5 font-mono flex justify-between items-center text-xs">
-                            <span class="text-slate-300">SATA Structured Yield</span>
-                            <span class="text-white font-bold bg-white/5 px-2 py-0.5 rounded border border-white/10">10% Allocation</span>
+                        
+                        <div>
+                            <div class="flex justify-between items-center text-xs font-mono mb-1.5">
+                                <span class="text-slate-300 font-bold">SATA Yield Array</span>
+                                <span class="text-slate-400 font-bold">10%</span>
+                            </div>
+                            <!-- Allocation Track -->
+                            <div class="w-full bg-terminalBlack h-2 rounded-full overflow-hidden p-0 border border-white/5">
+                                <div class="bg-slate-500 h-full rounded-full" style="width: 10%;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -204,6 +247,7 @@
             </div>
         </section>
 
+        <!-- Sovereign Pension Deficit Radar Grid Architecture with Red Badging Logic -->
         <section class="mb-16">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-white/5 pb-4 mb-8 gap-2">
                 <div>
@@ -218,6 +262,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
+                <!-- MALTA -->
                 <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between min-h-[190px]">
                     <div>
                         <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-3">
@@ -236,6 +281,7 @@
                     </div>
                 </div>
 
+                <!-- TURKEY -->
                 <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between min-h-[190px]">
                     <div>
                         <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-3">
@@ -254,6 +300,7 @@
                     </div>
                 </div>
 
+                <!-- KAZAKHSTAN -->
                 <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between min-h-[190px]">
                     <div>
                         <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-3">
@@ -272,6 +319,7 @@
                     </div>
                 </div>
 
+                <!-- UZBEKISTAN -->
                 <div class="bg-panelBg border border-white/5 p-6 rounded-2xl flex flex-col justify-between min-h-[190px]">
                     <div>
                         <div class="flex justify-between items-center border-b border-white/5 pb-2 mb-3">
@@ -295,6 +343,7 @@
 
     </main>
 
+    <!-- Operational System Footer -->
     <footer class="border-t border-white/5 bg-terminalBlack py-12 text-xs text-slate-600 mt-20">
         <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
